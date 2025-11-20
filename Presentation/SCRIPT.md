@@ -1,5 +1,9 @@
 # Demo Script
 
+💡 DEMO.png
+
+👉 Explorer View
+
 RiscV 64-bit
 - Integer Instructions
 - Multiply/Divide
@@ -18,7 +22,7 @@ Fork from GitHub repository
 Workspace | Project | Librariess
 ---|---|----
 Scope for VS Code | Scope for HDL files | Scope for Continuous Compiler
-Explorer | Project View | Library View
+👉 Explorer | 👉Project View | 👉 Library View
 
 ## Dependencies
 
@@ -106,8 +110,8 @@ endpackage
 
 👉 Topologoy
 
-- Cross probe to interface
+- Explain Hierarchy- Cross probe to interface
 
 - Interface: JSON handoff
 
-
+💡 WORKFLOW.png
