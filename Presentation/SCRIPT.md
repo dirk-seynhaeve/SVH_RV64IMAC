@@ -39,18 +39,25 @@ Scope for VS Code | Scope for HDL files | Scope for Continuous Compiler
 
 ## Problems
 
-- SYNTAX: Move include file
+### Syntax
+
+- Move include file from  uvm/include` to `uvm/source` (Problem count increases)
 - Filter for `include`
 - Cross probe to problem
-- Fix problem
+- Move the file back (Problem count decreases, error decoration is removed)
 
-- BEST PRACTICES and COMPLIANCE: Project Settings: Verilog Errors/Warnings
+### Best Practices and Compliance
+
+  - Project Settings: Verilog Errors/Warnings
   - `datatype` : Dissalow Reg Type (error)
-  - `naming` : Naming convention Module `[a-z01]+(_[a-z0-9]+)*`
+  - `naming` : Naming convention Module `[a-z01]+(_[a-z0-9]+)*` (snake_case)
+
+  ### CI/CD compliance enforcement
 
 - CI/CD: CLI
   - `sigasi-cli --help`
   - `sigasi-cli verify --fail-on-error .`
+
   - `echo $?`
 
 ## Visualization
