@@ -24,19 +24,29 @@ Workspace | Project | Librariess
 Scope for VS Code | Scope for HDL files | Scope for Continuous Compiler
 👉 Explorer | 👉Project View | 👉 Library View
 
+
 ## Dependencies
 
-- Dependency View
+👉 Hierarchy View
+
+- Cross probe into `tb_top`
+
+
+👉 Dependency View
 - Continous Incremental Compile
+- Export and open documentation
 - Compilation Order
 
 ## Problems
 
 - SYNTAX: Move include file
+- Filter for `include`
+- Cross probe to problem
+- Fix problem
 
-- BEST PRACTICES and COMPLIANCE: Rules
-  - Dissalow Reg Type (error)
-  - Naming convention Module `[a-z01]+(_[a-z0-9]+)*`
+- BEST PRACTICES and COMPLIANCE: Project Settings: Verilog Errors/Warnings
+  - `datatype` : Dissalow Reg Type (error)
+  - `naming` : Naming convention Module `[a-z01]+(_[a-z0-9]+)*`
 
 - CI/CD: CLI
   - `sigasi-cli --help`
@@ -49,7 +59,7 @@ Up to date documentation
 
 👉 tb_top : Open Block Diagram
 
-  - riscv_vif : Hover | Show in Block Diagram
+  - `riscv_if riscv_vif(clk)` : Hover | Show in Block Diagram
 
 👉 Hierarchy View
 
@@ -108,10 +118,16 @@ endpackage
 
 ## Verification/UVM
 
-👉 Topologoy
+👉 UVM Topologoy
 
-- Explain Hierarchy- Cross probe to interface
+- Explain Hierarchy
+- Cross probe to environment
 
-- Interface: JSON handoff
+👉 UVM Diagram
+
+- Explain hierarchy
+- Cross probe to interface
+
+- Deployment: JSON handoff (recipe)
 
 💡 WORKFLOW.png
