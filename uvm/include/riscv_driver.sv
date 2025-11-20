@@ -5,7 +5,7 @@
 
 class riscv_driver extends uvm_driver #(riscv_transaction);
 
-    `uvm_component_utils(riscv_driver)
+    // `uvm_component_utils(riscv_driver)
 
     virtual riscv_if vif;
 
