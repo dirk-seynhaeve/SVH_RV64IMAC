@@ -3,13 +3,15 @@
  * Contains driver, monitor, and sequencer for RISC-V testing
  */
 
+typedef uvm_sequencer #(riscv_transaction) riscv_sequencer;
+
 class riscv_agent extends uvm_agent;
 
     `uvm_component_utils(riscv_agent)
 
     riscv_driver driver;
     riscv_monitor monitor;
-    uvm_sequencer #(riscv_transaction) sequencer;
+    riscv_sequencer sequencer;
 
     uvm_analysis_port #(riscv_transaction) ap;
 
@@ -29,7 +31,7 @@ class riscv_agent extends uvm_agent;
         if (get_is_active() == UVM_ACTIVE) begin
             `uvm_info(get_type_name(), "Creating active agent components", UVM_MEDIUM)
             driver = riscv_driver::type_id::create("driver", this);
-            sequencer = uvm_sequencer #(riscv_transaction)::type_id::create("sequencer", this);
+            sequencer = riscv_sequencer::type_id::create("sequencer", this);
         end else begin
             `uvm_info(get_type_name(), "Creating passive agent (monitor only)", UVM_MEDIUM)
         end
